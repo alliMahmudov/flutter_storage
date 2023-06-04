@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced/pages/main_page.dart';
@@ -7,7 +5,7 @@ import 'package:flutter_advanced/pages/signin_page.dart';
 import 'package:flutter_advanced/pages/signup_page.dart';
 import 'package:flutter_advanced/pages/splash_page.dart';
 
-void main()  async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
@@ -24,9 +22,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const SplashPage(),
+      home: const MainPage(),
       routes: {
-        MainPage.id: (context) => const MainPage(),
+        SplashPage.id: (context) => const SplashPage(),
         SignInPage.id: (context) => const SignInPage(),
         SignUpPage.id: (context) => const SignUpPage(),
       },
