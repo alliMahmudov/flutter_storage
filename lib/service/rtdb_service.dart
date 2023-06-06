@@ -22,10 +22,12 @@ class RTDBService {
       var jsonPost = jsonEncode(child.value);
       Map<String, dynamic> map = jsonDecode(jsonPost);
       var post = Post(
-          firstname: map['firstname'],
-          lastname: map['lastname'],
-          date: map['date'],
-          content: map['content']);
+        firstname: map['firstname'],
+        lastname: map['lastname'],
+        date: map['date'],
+        content: map['content'],
+        imgUrl: map['imgUrl'],
+      );
       items.add(post);
     }
     return items;

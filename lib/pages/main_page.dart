@@ -124,6 +124,23 @@ class _MainPageState extends State<MainPage> {
               children: [
                 Row(
                   children: [
+                    SizedBox(
+                      width: 370,
+                      height: 200,
+                      child: post.imgUrl != null
+                          ? Image.network(
+                              post.imgUrl!,
+                              fit: BoxFit.cover,
+                            )
+                          : Image.asset("assets/images/default.jpg"),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
                     Text(
                       post.firstname!,
                       style: const TextStyle(
